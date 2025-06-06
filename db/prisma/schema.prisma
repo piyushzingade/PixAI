@@ -17,13 +17,16 @@ datasource db {
 enum AuthType {
   Google
   Github
+  Credentials
 }
+
 
 model User {
   id        String   @id @default(uuid())
-  name      String
+  name      String?
   email     String   @unique
   auth      AuthType @unique
+  password  String?   
 
 }
 

@@ -124,7 +124,8 @@ exports.Prisma.UserScalarFieldEnum = {
   id: 'id',
   name: 'name',
   email: 'email',
-  auth: 'auth'
+  auth: 'auth',
+  password: 'password'
 };
 
 exports.Prisma.ImageScalarFieldEnum = {
@@ -144,9 +145,15 @@ exports.Prisma.QueryMode = {
   default: 'default',
   insensitive: 'insensitive'
 };
+
+exports.Prisma.NullsOrder = {
+  first: 'first',
+  last: 'last'
+};
 exports.AuthType = exports.$Enums.AuthType = {
   Google: 'Google',
-  Github: 'Github'
+  Github: 'Github',
+  Credentials: 'Credentials'
 };
 
 exports.Prisma.ModelName = {
