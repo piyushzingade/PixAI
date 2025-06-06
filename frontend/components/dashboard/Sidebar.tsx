@@ -125,7 +125,7 @@ export default function Sidebar() {
       </div>
 
       {/* User Info */}
-      <div className="p-1 px-2 border-b border-neutral-800">
+      <div className="p-1 px-2 border-t border-neutral-700 ">
         <div className="flex items-center space-x-3">
           <Avatar>
             <AvatarImage src={session?.user?.image || ""} />
