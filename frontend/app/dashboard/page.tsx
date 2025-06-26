@@ -6,11 +6,10 @@ import Sidebar from "@/components/dashboard/Sidebar";
 export default function Dashboard() {
     return (
       <div className="flex w-full h-screen">
-
-             
-            <Sidebar />
-            <ImageGenerationCard />
-
+        <Sidebar />
+        <div className="max-h-screen w-full ">
+          <ImageGenerationCard />
+        </div>
       </div>
     );
 }

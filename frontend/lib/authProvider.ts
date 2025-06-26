@@ -1,11 +1,5 @@
-import { NextAuthOptions, Session, User } from "next-auth";
+import { NextAuthOptions } from "next-auth";
 import GoogleProvider from "next-auth/providers/google";
-import CredentialsProvider from "next-auth/providers/credentials";
-import bcrypt from "bcrypt";
-import Github from "next-auth/providers/github";
-
-
-
 
 if (
   !process.env.GOOGLE_CLIENT_ID ||
@@ -21,10 +15,6 @@ export const authOptions: NextAuthOptions = {
     GoogleProvider({
       clientId: process.env.GOOGLE_CLIENT_ID,
       clientSecret: process.env.GOOGLE_CLIENT_SEC,
-    }),
-    Github({
-      clientId: process.env.GITHUB_ID as string,
-      clientSecret: process.env.GITHUB_SECRET as string,
     }),
   ],
   session: {

@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
+
 import { useState } from "react";
 import { signIn, useSession } from "next-auth/react";
 import axios from "axios";
@@ -11,6 +11,7 @@ import { toast } from "sonner";
 import { useRouter } from "next/navigation";
 import githubLogo from "@/public/github.svg";
 import googleLogo from "@/public/google.svg";
+import { Input } from "./Input";
 
 export default function AuthPage({ type = "login" }) {
   const isLogin = type === "login";
@@ -188,21 +189,7 @@ export default function AuthPage({ type = "login" }) {
 
           <div className=" flex gap-2 flex-col-reverse">
             {/* GitHub Auth */}
-            <Button
-              onClick={handleGithubLogin}
-              variant="outline"
-              className="w-full flex items-center justify-center cursor-pointer hover:bg-neutral-200 hover:text-neutral-800"
-              disabled={loading}
-            >
-              <Image
-                src={githubLogo}
-                alt="GitHub"
-                width={20}
-                height={20}
-                className="mr-2 dark:text-white dark:bg-white rounded-full bg-neutral-800 border border-neutral-800 "
-              />
-              {loading ? "Loading..." : "Github"}
-            </Button>
+            
             {/* Google Auth */}
             <Button
               onClick={handleGoogleLogin}

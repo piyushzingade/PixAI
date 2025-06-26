@@ -54,8 +54,11 @@ app.post("/generate", async (req: Request, res: Response) => {
         // Save to DB first
         const saved = await prisma.image.create({
           data: {
+            id: filename,
             prompt,
             image: imageData,
+            createdAt: new Date(),
+            updatedAt: new Date(),
           },
         });
 
