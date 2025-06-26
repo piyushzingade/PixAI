@@ -148,7 +148,7 @@ export default function AuthPage({ type = "login" }) {
               required
             />
             {error && <p className="text-red-500 text-sm">{error}</p>}
-            <Button
+            <Buttongit 
               variant={"outline"}
               className="w-full cursor-pointer hover:bg-neutral-200 hover:text-neutral-800"
               type="submit"
