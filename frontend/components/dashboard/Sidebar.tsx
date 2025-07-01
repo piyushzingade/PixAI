@@ -128,7 +128,7 @@ export default function Sidebar() {
       <div className="p-1 px-2 border-t border-neutral-700 ">
         <div className="flex items-center space-x-3">
           <Avatar>
-            <AvatarImage src={session?.user?.image || ""} />
+            <AvatarImage className="bg-blue-500 rounded-full border border-blue-500" src={session?.user?.image || ""} />
             <AvatarFallback>
               {session?.user?.name?.charAt(0) || "U"}
             </AvatarFallback>

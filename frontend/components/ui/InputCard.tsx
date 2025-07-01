@@ -9,7 +9,7 @@ import {
   AIInputTools,
 } from "./KuboInput";
 import { GlobeIcon, MicIcon, PlusIcon } from "lucide-react";
-import { Dispatch, SetStateAction } from "react";
+import { Dispatch, SetStateAction, useState } from "react";
 
 interface InputCardProps {
   prompt: string;
@@ -26,6 +26,7 @@ export default function InputCard({
   status,
   disabled,
 }: InputCardProps) {
+  const [isSelected ,  setIsSelected] = useState(false);  5
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     handleGenerate();

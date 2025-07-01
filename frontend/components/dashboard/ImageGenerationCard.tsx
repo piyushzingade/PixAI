@@ -5,6 +5,8 @@ import axios from "axios";
 import Image from "next/image";
 import Loader from "../ui/Loader";
 import InputCard from "../ui/InputCard";
+import Link from "next/link";
+import { Download } from "lucide-react";
 
 export const BACKENK_URL =
   process.env.NEXT_PUBLIC_BACKENK_URL || "http://localhost:5000";
@@ -49,13 +51,25 @@ export const ImageGenerationCard = () => {
           {loading ? (
             <Loader />
           ) : imageData ? (
-            <Image
-              src={`data:image/png;base64,${imageData}`}
-              alt="Generated"
-              width={350}
-              height={200}
-              className="rounded-xl shadow-xl object-contain p-5 mx-6"
-            />
+            <>
+              <Image
+                src={`data:image/png;base64,${imageData}`}
+                alt="Generated"
+                width={350}
+                height={200}
+                className="rounded-xl shadow-xl object-contain p-5 mx-6"
+              />
+              <Link
+                href={`data:image/png;base64,${imageData}`}
+                download={`pixAi-${Date.now()}.png`}
+                className="mt-4 inline-block px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition"
+              >
+                <span>
+                  <Download />
+                </span>
+                Download Image
+              </Link>
+            </>
           ) : null}
         </div>
       </div>
