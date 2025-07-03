@@ -64,10 +64,8 @@ export const ImageGenerationCard = () => {
                 download={`pixAi-${Date.now()}.png`}
                 className="mt-4 inline-block px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition"
               >
-                <span>
                   <Download />
-                </span>
-                Download Image
+                
               </Link>
             </>
           ) : null}
