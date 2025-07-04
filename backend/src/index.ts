@@ -64,7 +64,8 @@ app.post("/generate", async (req: Request, res: Response) => {
 
         try {
           // Then save to file
-          fs.writeFileSync(filepath, buffer);
+          // fs.writeFileSync(filepath, buffer);
+          console.log(`Image saved to ${filepath}`);
         } catch (fileErr) {
           // If file save fails, roll back DB save
           await prisma.image.delete({ where: { id: saved.id } });
