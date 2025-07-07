@@ -90,7 +90,7 @@ export const HeroSection = () => {
           Get Started
         </Button>
 
-        <p className="relative inline-flex items-center gap-2 px-5 py-1.5 mb-6 text-sm font-semibold text-neutral-800 dark:text-white bg-neutral-200 dark:bg-neutral-800 rounded-full shadow-md hover:shadow-lg transition-shadow duration-300 group">
+        <p className="relative hover:scale-105 inline-flex items-center gap-2 px-5 py-1.5 mb-6 text-sm font-semibold text-neutral-800 dark:text-white bg-neutral-200 dark:bg-neutral-800 rounded-full shadow-md hover:shadow-lg transition-shadow duration-300 group">
           NOT Backed by
           <span className="inline-flex items-center justify-center bg-orange-500 text-white text-xs font-bold px-2 py-0.5 rounded">
             Y

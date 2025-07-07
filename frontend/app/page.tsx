@@ -1,10 +1,17 @@
-import { LandingPage } from "@/components/landingComps/LandingPage";
+import Features from "@/components/landingComps/Features";
+import Footer from "@/components/landingComps/Footer";
+import { HeroSection } from "@/components/landingComps/HeroSection";
+import Topbar from "@/components/landingComps/Topbar";
+
 
 
 export default function Home() {
   return (
-    <div className="bg-neutral-50 dark:bg-neutral-950 min-h-screen">
-      <LandingPage/>
-    </div>
+    <>
+      <Topbar/>
+      <HeroSection/>
+      <Features/>
+      <Footer/>
+    </>
   );
 }
