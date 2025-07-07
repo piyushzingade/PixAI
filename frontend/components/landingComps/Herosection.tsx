@@ -71,19 +71,22 @@ export const HeroSection = () => {
 
   return (
     <div
-      className="flex min-w-full h-screen min-h-[600px] justify-center items-center bg-neutral-950 overflow-hidden mt-4"
+      className="flex min-w-full h-screen min-h-[600px] justify-center items-center bg-neutral-50 dark:bg-neutral-950 overflow-hidden "
       ref={scope}
     >
       <motion.div
-        className="z-50 text-center space-y-4 items-center flex flex-col"
+        className="text-center space-y-4 items-center flex flex-col"
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.88, delay: 1.5 }}
       >
-        <p className="text-5xl md:text-7xl z-50 text-white font-calendas italic">
+        <p className="text-5xl md:text-7xl text-neutral-900  dark:text-neutral-100 font-calendas italic">
           Generate Customize Images <br /> with AI
         </p>
-        <Button onClick={() => router.push("/dashboard")} className="text-xs z-50 hover:scale-110 transition-transform bg-white text-black rounded-full py-2 w-20 cursor-pointer">
+        <Button
+          onClick={() => router.push("/dashboard")}
+          className="text-sm hover:scale-110 z-10 transition-transform text-neutral-50 bg-neutral-900 dark:bg-neutral-100 dark:text-neutral-900 rounded-full px-2 py-1.5  cursor-pointer"
+        >
           Get Started
         </Button>
 

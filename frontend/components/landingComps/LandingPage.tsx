@@ -1,7 +1,7 @@
 
 import Features from "./Features"
 import Footer from "./Footer"
-import { HeroSection } from "./Herosection"
+import { HeroSection } from "./HeroSection"
 import Topbar from "./Topbar"
 
 export const LandingPage = () => {

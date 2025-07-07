@@ -86,7 +86,7 @@ export default function Topbar() {
           <Button
             onClick={toggleDarkMode}
             aria-label="Toggle Dark Mode"
-            className="p-1 rounded-md bg-neutral-50 dark:bg-neutral-800 hover:bg-neutral-100"
+            className="p-1 rounded-md bg-neutral-50 dark:bg-neutral-800 hover:bg-neutral-200 dark:hover:bg-neutral-700 cursor-pointer"
           >
             {isDarkMode ? (
               <Moon className="w-5 h-5 text-neutral-800 dark:text-neutral-200" />
@@ -95,22 +95,7 @@ export default function Topbar() {
             )}
           </Button>
 
-          <motion.div layoutId="signin" className="flex gap-2">
-            <Button
-              onClick={() => router.push("/login")}
-              variant="outline"
-              className="rounded-2xl text-neutral-800 dark:text-neutral-200 bg-neutral-50 dark:bg-neutral-800 border border-neutral-200 dark:border-neutral-800"
-            >
-              Login
-            </Button>
-            <Button
-              onClick={() => router.push("/signup")}
-              variant="outline"
-              className="rounded-2xl bg-neutral-800 text-neutral-200 dark:bg-neutral-50 dark:text-neutral-800 border border-neutral-200"
-            >
-              Sign Up
-            </Button>
-          </motion.div>
+          
         </div>
 
         {/* Mobile Toggle Button */}
