@@ -9,7 +9,7 @@ export default function Dashboard() {
         <Sidebar />
         <div className="max-h-screen w-full ">
           <ImageGenerationCard />
-        </div>
+        </div>  
       </div>
     );
 }

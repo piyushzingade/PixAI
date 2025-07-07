@@ -1,10 +1,9 @@
 "use client";
 
-import { useEffect, useState } from "react";
-import { LogOut, Trash2 } from "lucide-react";
+import {  useState } from "react";
+import {  Trash2 } from "lucide-react";
 import { signOut, useSession } from "next-auth/react";
 import Link from "next/link";
-import { AvatarFallback, AvatarImage, Avatar } from "../ui/avatar";
 import { Button } from "../ui/button";
 import DashLoader from "../ui/DashLoader";
 
@@ -124,36 +123,7 @@ export default function Sidebar() {
         )}
       </div>
 
-      {/* User Info */}
-      <div className="p-1 px-2 border-t border-neutral-700 ">
-        <div className="flex items-center space-x-3">
-          <Avatar>
-            <AvatarImage className="bg-blue-500 rounded-full border border-blue-500" src={session?.user?.image || ""} />
-            <AvatarFallback>
-              {session?.user?.name?.charAt(0) || "U"}
-            </AvatarFallback>
-          </Avatar>
-          <div className="flex-1 min-w-0">
-            <p className="text-sm font-medium truncate">
-              {session?.user?.name || "User"}
-            </p>
-            <p className="text-xs text-muted-foreground truncate">
-              {session?.user?.email}
-            </p>
-          </div>
-        </div>
-      </div>
-
-      {/* Sign Out */}
-      <div className="p-2 border-t border-neutral-800 ">
-        <Button
-          className="w-full justify-start text-neutral-200 border border-neutral-700 bg-neutral-800 hover:bg-neutral-800"
-          onClick={handleSignOut}
-        >
-          <LogOut className="h-4 w-4 mr-2" />
-          Sign Out
-        </Button>
-      </div>
+     
     </aside>
   );
 }

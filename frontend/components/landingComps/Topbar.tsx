@@ -48,7 +48,7 @@ export default function Topbar() {
       transition={{ duration: 0.3 }}
       className="fixed top-4 left-0 w-full z-50 px-4"
     >
-      <div className="mx-auto max-w-7xl bg-neutral-50/80 dark:bg-neutral-800/80 backdrop-blur-md shadow-lg rounded-3xl border border-neutral-200 dark:border-neutral-700 px-6 py-3 flex items-center justify-between">
+      <div className="mx-auto max-w-7xl bg-neutral-50/80 dark:bg-neutral-800/80 backdrop-blur-md shadow-lg rounded-3xl border border-neutral-200 dark:border-neutral-700 px-2 py-1 flex items-center justify-between">
         {/* Left: Logo + Nav (desktop) */}
         <div className="flex items-center gap-8">
           {/* Logo */}
@@ -66,13 +66,13 @@ export default function Topbar() {
           </Link>
 
           {/* Desktop Nav Items */}
-          <motion.ul layoutId="navItems" className="hidden md:flex gap-6 pl-6">
+          <motion.ul layoutId="navItems" className="hidden md:flex gap-6 pl-3">
             {navItems.map((item, ) => (
               <li key={item.name}>
                 <Button
                   variant="link"
                   onClick={() => router.push(item.href)}
-                  className="px-3 py-2 text-md relative font-medium text-neutral-600 dark:text-neutral-300 rounded-2xl  transition-colors"
+                  className="px-2 py-1 text-md relative font-medium text-neutral-600 dark:text-neutral-300 rounded-2xl  transition-colors"
                 >
                   {item.name}
                 </Button>
@@ -86,7 +86,7 @@ export default function Topbar() {
           <Button
             onClick={toggleDarkMode}
             aria-label="Toggle Dark Mode"
-            className="p-2 rounded-md bg-neutral-50 dark:bg-neutral-800 hover:bg-neutral-100"
+            className="p-1 rounded-md bg-neutral-50 dark:bg-neutral-800 hover:bg-neutral-100"
           >
             {isDarkMode ? (
               <Moon className="w-5 h-5 text-neutral-800 dark:text-neutral-200" />
@@ -118,7 +118,7 @@ export default function Topbar() {
           {!isMobileMenuOpen && (
             <Button
               onClick={() => setIsMobileMenuOpen(true)}
-              className="p-2 rounded-md bg-neutral-200 dark:bg-neutral-700"
+              className="p-1 rounded-md bg-neutral-200 dark:bg-neutral-700"
             >
               <Menu className="w-6 h-6 text-neutral-800 dark:text-white" />
             </Button>
@@ -135,7 +135,7 @@ export default function Topbar() {
           ></div>
 
           <div
-            className="relative z-50 bg-white dark:bg-neutral-900 w-64 h-full p-6 space-y-6 shadow-xl"
+            className="relative z-50 bg-white dark:bg-neutral-900 w-64 h-full p-3 space-y-6 shadow-xl"
             onClick={(e) => e.stopPropagation()}
           >
             {/* Close Button */}
@@ -170,26 +170,6 @@ export default function Topbar() {
                 )}
               </Button>
 
-              <Button
-                onClick={() => {
-                  router.push("/login");
-                  setIsMobileMenuOpen(false);
-                }}
-                variant="outline"
-                className="w-full"
-              >
-                Login
-              </Button>
-              <Button
-                onClick={() => {
-                  router.push("/signup");
-                  setIsMobileMenuOpen(false);
-                }}
-                variant="outline"
-                className="w-full"
-              >
-                Sign Up
-              </Button>
             </div>
           </div>
         </div>

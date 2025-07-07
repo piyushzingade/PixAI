@@ -6,7 +6,7 @@ import githubLogo from "@/public/github.svg";
 
 export default function Footer() {
   return (
-    <footer className="bg-white dark:bg-neutral-900 border-t border-gray-200 dark:border-neutral-700 px-6 pt-12 pb-6 ">
+    <footer className="bg-white dark:bg-neutral-950 border-t border-gray-200 dark:border-neutral-700 px-6 pt-12 pb-6 ">
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-10 text-sm text-gray-600 dark:text-gray-400">
         {/* Brand & Social */}
         <div className="space-y-4">
