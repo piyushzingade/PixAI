@@ -9,7 +9,7 @@ import {
   AIInputTools,
 } from "./KuboInput";
 import { GlobeIcon, MicIcon, PlusIcon } from "lucide-react";
-import { Dispatch, SetStateAction, useState } from "react";
+import { Dispatch, SetStateAction } from "react";
 
 interface InputCardProps {
   prompt: string;
@@ -26,7 +26,6 @@ export default function InputCard({
   status,
   disabled,
 }: InputCardProps) {
-  const [isSelected ,  setIsSelected] = useState(false);  5
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     handleGenerate();
@@ -34,7 +33,7 @@ export default function InputCard({
 
   return (
     <AIInput
-      className="border border-neutral-700 text-neutral-400 overflow-y-auto"
+      className="border border-neutral-700 bg-neutral-900 text-neutral-400 overflow-y-auto"
       onSubmit={handleSubmit}
     >
       <AIInputTextarea
@@ -56,7 +55,7 @@ export default function InputCard({
         </AIInputTools>
         <AIInputSubmit
           onClick={handleGenerate}
-          className="cursor-pointer hover:bg-neutral-200 dark:hover:bg-neutral-800"
+          className="cursor-pointer"
           disabled={disabled || !prompt.trim()}
           status={status}
         />

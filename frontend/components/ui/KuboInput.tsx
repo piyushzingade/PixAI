@@ -7,13 +7,6 @@ import type {
 } from "react";
 import { Children, useCallback, useEffect, useRef } from "react";
 import { Button } from "@/components/ui/button";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
 import { Textarea } from "@/components/ui/textarea";
 import { cn } from "@/lib/utils";
 
@@ -85,7 +78,7 @@ export type AIInputTextareaProps = ComponentProps<typeof Textarea> & {
 export const AIInputTextarea = ({
   onChange,
   className,
-  placeholder = "What would you like to know?",
+  placeholder = "Generate an image...",
   minHeight = 48,
   maxHeight = 164,
   ...props
@@ -106,7 +99,7 @@ export const AIInputTextarea = ({
   return (
     <Textarea
       className={cn(
-        "w-full resize-none rounded-none border-none p-3 shadow-none outline-none ring-0",
+        "w-full resize-none rounded-none border-none p-3 shadow-none outline-none ring-0 text-neutral-400",
         "bg-transparent dark:bg-transparent",
         "focus-visible:ring-0",
         className
@@ -209,46 +202,4 @@ export const AIInputSubmit = ({
     </Button>
   );
 };
-export type AIInputModelSelectProps = ComponentProps<typeof Select>;
-export const AIInputModelSelect = (props: AIInputModelSelectProps) => (
-  <Select {...props} />
-);
-export type AIInputModelSelectTriggerProps = ComponentProps<
-  typeof SelectTrigger
->;
-export const AIInputModelSelectTrigger = ({
-  className,
-  ...props
-}: AIInputModelSelectTriggerProps) => (
-  <SelectTrigger
-    className={cn(
-      "border-none bg-transparent font-medium text-muted-foreground shadow-none transition-colors",
-      'hover:bg-accent hover:text-foreground [&[aria-expanded="true"]]:bg-accent [&[aria-expanded="true"]]:text-foreground',
-      className
-    )}
-    {...props}
-  />
-);
-export type AIInputModelSelectContentProps = ComponentProps<
-  typeof SelectContent
->;
-export const AIInputModelSelectContent = ({
-  className,
-  ...props
-}: AIInputModelSelectContentProps) => (
-  <SelectContent className={cn(className)} {...props} />
-);
-export type AIInputModelSelectItemProps = ComponentProps<typeof SelectItem>;
-export const AIInputModelSelectItem = ({
-  className,
-  ...props
-}: AIInputModelSelectItemProps) => (
-  <SelectItem className={cn(className)} {...props} />
-);
-export type AIInputModelSelectValueProps = ComponentProps<typeof SelectValue>;
-export const AIInputModelSelectValue = ({
-  className,
-  ...props
-}: AIInputModelSelectValueProps) => (
-  <SelectValue className={cn(className)} {...props} />
-);
+

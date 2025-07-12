@@ -12,7 +12,6 @@ import { useAnimationFrame } from "motion/react";
 
 import { cn } from "@/lib/utils";
 import { useMousePositionRef } from "@/hooks/use-mouse-pointer";
-
 interface FloatingContextType {
   registerElement: (id: string, element: HTMLDivElement, depth: number) => void;
   unregisterElement: (id: string) => void;

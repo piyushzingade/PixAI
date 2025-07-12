@@ -34,7 +34,9 @@ export const ImageGenerationCard = () => {
       if (base64) {
         setImageData(base64);
         setPrompt(""); // Clear prompt after success
+        setStatus("ready");
       }
+
     } catch (error) {
       console.error("Error generating image:", error);
       setStatus("error");

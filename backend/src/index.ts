@@ -47,7 +47,7 @@ app.post("/generate", async (req: Request, res: Response) => {
     for (const part of parts) {
       if (part.inlineData) {
         const imageData = part.inlineData.data as string;
-        const buffer = Buffer.from(imageData, "base64");
+        // const buffer = Buffer.from(imageData, "base64");
         const filename = `gemini-${Date.now()}.png`;
         const filepath = `./${filename}`;
 
@@ -84,12 +84,6 @@ app.post("/generate", async (req: Request, res: Response) => {
   }
 });
   
-app.get("/images", async (req: Request, res: Response) => {
-  const images = await prisma.image.findMany({
-    orderBy: { createdAt: "desc" },
-  });
-  res.json(images);
-});
 
 
 app.listen(5000, () => {
